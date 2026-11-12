@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>書類受付 | 書類一覧</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="bar">
+  <span>書類受付システム</span>
+  <span><span id="current-user"></span> さん <button id="logout" type="button" class="link">ログアウト</button></span>
+</header>
+<main class="card">
+  <h1>書類の登録</h1>
+  <form id="document-form" novalidate>
+    <label>ファイル名
+      <input name="fileName" placeholder="invoice.pdf" aria-describedby="fileName-error">
+    </label>
+    <p id="fileName-error" class="error field-error" hidden></p>
+    <label>本文
+      <textarea name="content" rows="3" aria-describedby="content-error"></textarea>
+    </label>
+    <p id="content-error" class="error field-error" hidden></p>
+    <button type="submit">登録する</button>
+  </form>
+  <p id="message" role="status" hidden></p>
+
+  <h2>登録済みの書類</h2>
+  <p id="empty" hidden>登録済みの書類はありません</p>
+  <table id="document-table" hidden>
+    <thead><tr><th>ID</th><th>ファイル名</th><th>ステータス</th></tr></thead>
+    <tbody></tbody>
+  </table>
+</main>
+<script src="/documents.js"></script>
+</body>
+</html>
