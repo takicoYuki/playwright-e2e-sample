@@ -54,7 +54,3 @@ tests/
 ## 関連リポジトリ
 
 - [document-ocr-batch](https://github.com/takicoYuki/document-ocr-batch)：同じ「書類受付」を題材にしたバックエンド（Spring Boot / Spring Batch）
-
-## 開発について
-
-このリポジトリは AI コーディングアシスタントの Claude（Anthropic）を使って作成しています。
